@@ -233,7 +233,7 @@ Some of the features -
 
 ---
 **Technical Specifications**
-* building Platform - Eclipse (kepler)
+* IDE used - Eclipse (kepler)
 * Server - Tomcat v7.0
-* database - MySql (at localhost)
-* other concepts implemented- MVC, AJAX, JSP, jdbc driver, java beans
+* Database - MySql (at localhost)
+* Other concepts implemented- MVC, AJAX, JSP, jdbc driver, java beans
