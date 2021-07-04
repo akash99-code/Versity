@@ -1,12 +1,12 @@
 # Versity 
 **University Portal**
 
-A java-based web app, which provides a attractive UI to manage the the database of university.
+A java-based web app, which provides a attractive UI to manage the database of university.
 
 Some of the features -
 * Extract details of a student by their Roll Number.
-* Search details of Courses provided by various departments
-* List the Grades of students
+* Search Course details provided by various departments
+* List the Grades of all the students in the university
 * Add new student into the database
 * Generate an instuctor's workload report
 ---
