@@ -1,0 +1,123 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+body {
+    
+    margin-top: 0px;
+    background: #f2f2f2;
+    place-items: center;
+    
+}
+ 
+*{
+
+    font-family: 'Poppins', sans-serif;
+    box-sizing:border-box;
+    
+
+    
+    /***/
+}
+
+.container{
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    gap:35px;
+    align-items: stretch;
+    /**line-height: 30px;*/
+    font-size: 20px;
+    height: 100%;
+	padding:3% 5% 3% 5%;
+	overflow-y: scroll;
+	background: transparent;
+    /**margin: 15px;*/
+    
+}
+.container::-webkit-scrollbar { 
+	width:0;
+    display: none;  /* Safari and Chrome */
+}
+
+.box{
+    
+    /**margin-top: 30px;
+    margin-left: 8%;
+    margin-right: 8%;*/
+    padding: 20px;
+    
+    /**position: relative;*/
+    text-align: center;
+    /**width: 380px;*/
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+ 	height:100%;
+ 	
+
+}
+
+.buttons{
+	cursor:pointer;
+    padding:5px;
+    letter-spacing: 1.5px;
+    font-size: 13px;
+    margin-left: 9px;
+    font-weight: 500;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.63);
+    border-radius: 5px 10px 5px 0px;
+    outline: none;
+    color: #fff;
+    background: linear-gradient(-150deg, rgb(36, 12, 250), rgb(4, 1, 32));
+    transition: .1s linear;
+   
+}
+.buttons:hover{
+    
+    border-radius: 11px 15px 11px 0px;
+    box-shadow: 2px 2px 6px 0.5px rgba(0,0,0,.4);
+    transform: translate(-10%,-6%);
+}
+.buttons:active{
+
+    text-shadow: -1px -1px 6px white;
+    transform: translate(-10%,7%);
+}
+.inpbox{
+    position: relative;
+    /**margin-top:25px;*/
+}
+.inpbox .txt{
+    font-size: 16px;
+    position: absolute;
+    padding-top: 6px;
+    font-weight: 500;   
+    background-clip: content-box;
+    width: fit-content; /**imp*/
+    color: rgb(153, 152, 152);  
+  	
+    transform: translateX(-111%);
+    /**transition:  .2s;*/
+   
+}
+.inputbar:focus ~ .txt,
+.inputbar:valid ~ .txt
+{
+    transition: .2s;
+    font-size: 55%;
+    transform: translate(-111%,-60%);
+    background-color: rgb(255, 255, 255);
+       
+}
+.inputbar{
+    /**position: relative;*/
+    outline: none;
+    border:1px solid rgb(145, 130, 130);
+    padding-left: 20px;
+    border-width: 1px;
+    border-radius: 13px;
+    height: 39px;
+    width: 240px;
+    /**margin:32px;*/
+}

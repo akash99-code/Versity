@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="designmain.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    	var count=0;
+       function resizeIframe(obj) 
+       {
+        	if(count++!=0)
+         	{
+        		obj.style.display='block';
+          		size= obj.contentWindow.document.body.scrollHeight;
+          		obj.style.height=(size+70) + 'px';
+         		console.log(size);
+         	}
+        	
+        }
+      </script>
+    </head>
+
+<body style="font-size:50px">
+    <div class='container'>
+    <div class="box">
+        <form action="coursecontroller" method="post" target="iframe_a">     
+                <div class="inpbox">
+                <input name="title" type="text" class="inputbar" id="rollno" required>
+                 <label for="rollno"class="txt" >Enter related Course Title</label>    
+                <input class="buttons" type="submit" value="search" >    
+                </div> 
+        </form>
+    </div>	
+    
+        <iframe class="box" 
+         style="border: none; position: relative; width: 100%; display:none"  
+         name="iframe_a"
+          onload="resizeIframe(this)"
+         ></iframe>
+         
+    
+    </div>
+</body>
+
+
+</html>

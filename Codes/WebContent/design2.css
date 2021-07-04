@@ -1,0 +1,123 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+body {
+    /**font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;*/
+    margin-top: 0px;
+    
+}
+ 
+*{
+    cursor:default;
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+::selection{
+  background: #4158d0;
+  color: #fff;
+}
+
+.content{
+    display:flex;
+    gap:0px;
+    align-items: stretch;
+    height: 73.5vh;
+}
+
+.mainpage{
+	overflow-y: scroll;*/
+	/**padding:3% 5% 3% 5%;*/
+    text-align: center;
+    align-items: center;
+    order: 2;
+    flex-grow: 1;  
+    background: #f2f2f2;
+    height: 100%;
+    border: none; 
+    
+}
+
+
+.content .sidebar{
+    /**position: relative;*/
+    height: 100%;
+    left:-250px;
+    width: 0px;
+    order:1;
+    background-color: rgb(0, 0, 12);
+    box-shadow:2px 0px 30px -5px rgb(36, 12, 250) inset;
+    transition: .3s;
+}
+.head{
+    font-size: 23px;
+    color: aliceblue;
+    padding-top: 59px;
+    background-attachment: fixed;
+    line-height: 20px;
+    background-color: rgb(5, 1, 32);
+    box-shadow:-25px 7px 30px 8px rgb(36, 12, 250) inset;
+}    
+.head #btn{
+     margin-left: 6px;
+      font-size: 20px;
+    /**border-top-width: 20px;*/
+    border-color: rgb(5, 1, 32);
+    border-radius: 100px;
+    
+    
+    
+}
+.content .sidebar ul li{
+    display: block;
+    color: whitesmoke;
+    height: 100%;
+    width:100%;
+    line-height: 65px;
+    font-size: 21px;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(47, 117, 163, 0.5);
+    border-bottom: 1px solid black;
+    transition: .4s;
+}
+.content ul li:hover{
+    padding-left: 70px;
+}
+
+#check{
+    display:none
+    
+}
+
+#check:hover ~ .content .sidebar{
+    left:0px;
+    width:235px;
+}
+.content .sidebar:hover{
+    left:0px;
+    width:235px;
+}
+#check:checked ~ .content .sidebar{
+    left:0px;
+    width:250px;
+}
+#check:hover~ .head #btn{
+    box-shadow: 5px -10px 40px 8px rgb(36, 12, 250);
+    transition: .2s;
+}
+#check:checked ~ .head #btn{
+    /**color: rgb(77, 144, 245);*/
+    color: #4d79ff;
+    transition: 0s;
+}
+.foot {
+    padding: 5px 10px 5px 5px;
+    height: 30%;
+ 	/**background-color: rgba(0, 0, 0, 0.911);
+    color: rgba(240, 240, 255, 0.616);*/
+    background-color: rgb(0, 0, 12);
+    color:#8c8c8c;
+}
+.foot .right{
+    text-align: right;
+}

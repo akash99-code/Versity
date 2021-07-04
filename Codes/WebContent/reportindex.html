@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="designmain.css">
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+         
+        function filloptions()
+        {
+          var xmlhttp;    
+          if (window.XMLHttpRequest)
+          	xmlhttp=new XMLHttpRequest();
+          else
+          	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+          xmlhttp.onreadystatechange=function()
+          {
+          	if (xmlhttp.readyState==4 && xmlhttp.status==200)
+              document.getElementById("year").innerHTML=xmlhttp.responseText;
+            
+          }
+        	xmlhttp.open("GET","reportcontroller",true);
+        	xmlhttp.send(null);
+        }
+        var count=0;
+    	function startload()
+    	{
+    		console.log("sent");
+            document.body.style.cursor = 'wait';
+        };
+       function resizeIframe(obj) 
+       {
+    	   
+    	   if(count++!=0)
+         	{
+        		obj.style.display='block';
+          		size= obj.contentWindow.document.body.scrollHeight;
+          		obj.style.height=(size+70) + 'px';
+         		console.log(size);
+         	}
+    	   document.body.style.cursor = 'default';
+        };
+         
+      </script>
+</head>
+<body style="font-size:50px" onload="filloptions()">
+    <div class='container'>
+    <div class="box" style="text-align: left;">
+        <form action="reportcontroller" method="post" target="iframe_a" style="margin-left: 8%;">     
+				<p>&emsp;&emsp;Enter Report Details :</p>
+                <div class="inpbox" style="margin:25px;">
+                <input name="name" type="text" class="inputbar" id="name" required>
+                 <label for="name" class="txt" > Enter Instructor's Name</label>        
+                </div> 
+                
+                <div class="inpbox" style="margin:25px;">
+                <select name="sem" class="inputbar" required>
+                	<option selected disabled value="">Select Semester</option>
+                	<option value="Fall" >Fall</option>
+                	<option value="Winter">Winter</option>
+                	<option value="Spring">Spring</option>
+                	<option value="Summer">Summer</option>
+				</select>
+				</div>   
+                <div class="inpbox" style="margin:25px;">
+                <select name="year" id="year" class="inputbar" required>
+				</select>
+				</div>
+				<input class="buttons" type="submit" value="generate" style="margin-left:190px;">
+        </form>
+    	</div>		
+        	<iframe class="box" 
+         	style="border: none; position: relative; width: 100%; display:none"  
+         	name="iframe_a"
+          	onload="resizeIframe(this)"></iframe>
+    		
+    
+    
+    </div>
+
+</body>
+</html>
